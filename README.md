@@ -11,6 +11,10 @@ This project uses the [Sleep Health and Lifestyle Dataset](https://www.kaggle.co
 
 ## Dataset
 **Source:** Kaggle — [*Sleep Health and Lifestyle Dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) 
+
+The dataset is imported from the above source into the [data](/workspaces/sleep-health-predictor/data) folder
+and saved as sleep_health_lifestyle.csv.
+
 **Features include:**
 - `Sleep Duration`, `Stress Level`, `Physical Activity Level`, `BMI`, `Screen Time`, <<<fill here>>>
 - Target: `Sleep Disorder` (binary classification)

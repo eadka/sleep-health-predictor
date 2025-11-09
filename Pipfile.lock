@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "af5214a964145779fa7b80c2fb4a94876cbe29a944d3c0cbc232ab8ee5a32439"
+            "sha256": "0893f3463074fe2be1345b2d0151154e11e9240ec5183d3879c3a19a836c107a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1226,6 +1226,14 @@
             "markers": "python_version >= '3.11'",
             "version": "==2.3.4"
         },
+        "nvidia-nccl-cu12": {
+            "hashes": [
+                "sha256:29ea236d02fd57ea5f14537e95985d190c6ca067a1eba2e2b319deebdd6ccdc3",
+                "sha256:391a53ca3036972fc059c2977bdf34f982c8f5259d5264d10756b11f5cb41e0c"
+            ],
+            "markers": "python_version >= '3'",
+            "version": "==2.28.7"
+        },
         "packaging": {
             "hashes": [
                 "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
@@ -2154,6 +2162,19 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==4.0.15"
+        },
+        "xgboost": {
+            "hashes": [
+                "sha256:2e1067489688ad99a410e8f2acdfe9d21a299c2f3b4b25dc8f094eae709c7447",
+                "sha256:405e48a201495fe9474f7aa27419f937794726a1bc7d2c2f3208b351c816580a",
+                "sha256:4347671aa8a495595f17135171aeae5f6d9ab4b4e7b02f191864cf2202e3c902",
+                "sha256:47fbf190a3804d5a8c25188781f8f5412a5724ea3a0604d29d4af4b3120ffa6b",
+                "sha256:a51a2e488102a007b8c222d58bf855415002e8cdf06d104eea24b08dbf4eec4f",
+                "sha256:fac06c989f2cf11af7aa546b3bb78e7fa87595891e5dfde28edf3e7492e5440a"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.10'",
+            "version": "==3.1.1"
         }
     },
     "develop": {}

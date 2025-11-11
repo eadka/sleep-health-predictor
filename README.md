@@ -106,5 +106,18 @@ While longer sleep and regular physical activity tend to enhance rest quality, e
 
 4. **Model Training** – Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
 5. **Model Evaluation** – R² and 
+
+| **Model**         | **Test Score (Base)** | **Test Score (Tuned)** |
+| ----------------- | --------------------: | ---------------------: |
+| Linear Regression |                0.9657 |                 0.9632 |
+| Ridge Regression  |                0.9643 |                 0.9617 |
+| Lasso             |                0.0442 |                 0.9624 |
+| Decision Tree     |                0.9860 |                 0.9388 |
+| Random Forest     |                0.9790 |                 0.9571 |
+| 🥇 **XGBoost**    |            **0.9802** |             **0.9711** |
+
+**XGBoost** delivers the **highest R²** score both before and after tuning, indicating it’s the **most robust** model for predicting quality of sleep.
+
+
 6. **Deployment** – FastAPI app + Docker container
 

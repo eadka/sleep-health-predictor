@@ -16,17 +16,17 @@ The dataset is imported from the above source into the [data](https://github.com
 and saved as sleep_health_lifestyle.csv.
 
 **Features include:**
-- `Sleep Duration`, `Stress Level`, `Physical Activity Level`, `BMI`, `Screen Time`, <<<fill here>>>
-- Target: `Sleep Disorder` (binary classification)
+- `Age`, `Gender`, `Occupation`, `Blood Pressure`, `Stress Level`, `Heart Rate`, `Physical Activity Level`, `Daily Steps`, `BMI`, `Sleep Duration`, `Sleep Disorder`
+- Target: `Quality of Sleep` 
 
 ## Workflow
+The dataset analysis and the models training were conducted in Jupyter Notebook. You can find it in the file named [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/notebook.ipynb).
+
 1. **Data Cleaning & Exploration**
-
-
 2. **Feature Engineering**
-
 3. **Exploratory Data Analysis**
-## 💤 Findings from Correlation Analysis with *Quality of Sleep*
+
+## 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
 
 <table>
 <tr><th>Type</th><th>Feature</th><th>Correlation</th><th>Interpretation</th></tr>
@@ -97,13 +97,7 @@ While longer sleep and regular physical activity tend to enhance rest quality, e
 
 💡 Maintaining a <b>balanced lifestyle</b> — combining adequate rest, consistent exercise, and stress management — can meaningfully improve overall sleep quality.
 
-
-
-3. **Model Training** – Random Forest, XGBoost, etc.
-
-
-4. **Model Evaluation** – ROC AUC, feature importance
-
-
-5. **Deployment** – FastAPI app + Docker container
+4. **Model Training** – Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
+5. **Model Evaluation** – R² and 
+6. **Deployment** – FastAPI app + Docker container
 

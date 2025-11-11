@@ -1,4 +1,9 @@
 # Sleep Health Predictor
+
+<p align="center">
+  <img src="https://github.com/eadka/fridgechef/blob/main/images/FridgeChefIcon.png" alt="FridgeChef" width="400"/>
+</p>
+
 A machine learning project analyzing how **lifestyle habits** like stress, BMI, and screen time influence **sleep quality and disorders**.
 
 
@@ -20,7 +25,9 @@ and saved as sleep_health_lifestyle.csv.
 - Target: `Quality of Sleep` 
 
 ## Workflow
-The dataset analysis and the models training were conducted in Jupyter Notebook. You can find it in the file named [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/notebook.ipynb).
+The dataset analysis and the models training were conducted in Jupyter Notebook. You can find it in the file named [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb).
+
+Following steps were performed in this notebook.
 
 1. **Data Cleaning & Exploration**
 2. **Feature Engineering**

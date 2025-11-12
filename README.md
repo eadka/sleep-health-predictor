@@ -104,20 +104,25 @@ While longer sleep and regular physical activity tend to enhance rest quality, e
 
 💡 Maintaining a <b>balanced lifestyle</b> — combining adequate rest, consistent exercise, and stress management — can meaningfully improve overall sleep quality.
 
-4. **Model Training** – Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
-5. **Model Evaluation** – R² and 
 
-| **Model**         | **Test Score (Base)** | **Test Score (Tuned)** |
-| ----------------- | --------------------: | ---------------------: |
-| Linear Regression |                0.9657 |                 0.9632 |
-| Ridge Regression  |                0.9643 |                 0.9617 |
-| Lasso             |                0.0442 |                 0.9624 |
-| Decision Tree     |                0.9860 |                 0.9388 |
-| Random Forest     |                0.9790 |                 0.9571 |
-| 🥇 **XGBoost**    |            **0.9802** |             **0.9711** |
+4. **Model Training** – Models trained are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
 
-**XGBoost** delivers the **highest R²** score both before and after tuning, indicating it’s the **most robust** model for predicting quality of sleep.
 
+5. **Model Evaluation** – **Grid Search** along with **Cross Validation** are used to tune the hyperparameters to ensure we enable better parameter interactions and get more robust results. **R²**, **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) are used to assess the results.
+
+The below table shows the results of the **Baseline** and **Tuned** models. 
+
+| Model                 | R² (Baseline) | RMSE (Baseline) | MAE (Baseline) | R² (Tuned) | RMSE (Tuned) | MAE (Tuned) |
+| --------------------- | ------------- | --------------- | -------------- | ---------- | ------------ | ----------- |
+| **Linear Regression** | 0.966         | 0.255           | 0.153          | 0.963      | 0.264        | 0.161       |
+| **Ridge Regression**  | 0.964         | 0.261           | 0.166          | 0.957      | 0.286        | 0.193       |
+| **Lasso**             | 0.044         | 1.348           | 1.189          | 0.954      | 0.295        | 0.205       |
+| **Decision Tree**     | 0.986         | 0.163           | 0.027          | 0.967      | 0.250        | 0.077       |
+| **Random Forest**     | 0.979         | 0.200           | 0.059          | 0.983      | 0.178        | 0.050       |
+|🥇**XGBoost**         | 0.980         | 0.194           | 0.031          | 0.985      | 0.171        | 0.055       |
+
+
+**XGBoost** achieved the **highest R²** (0.985) and **lowest RMSE** (0.171) among all tuned models, indicating it’s the **most robust** model for predicting `quality_of_sleep`.
 
 6. **Deployment** – FastAPI app + Docker container
 

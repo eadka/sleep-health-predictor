@@ -104,6 +104,7 @@ While longer sleep and regular physical activity tend to enhance rest quality, e
 
 💡 Maintaining a <b>balanced lifestyle</b> — combining adequate rest, consistent exercise, and stress management — can meaningfully improve overall sleep quality.
 
+---
 
 4. **Model Training** – Models trained are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
 
@@ -123,6 +124,8 @@ The below table shows the results of the **Baseline** and **Tuned** models.
 
 
 **XGBoost** achieved the **highest R²** (0.985) and **lowest RMSE** (0.171) among all tuned models, indicating it’s the **most robust** model for predicting `quality_of_sleep`.
+
+---
 
 6. **Deployment** – FastAPI app + Docker container
 

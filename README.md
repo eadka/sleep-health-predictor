@@ -129,3 +129,66 @@ The below table shows the results of the **Baseline** and **Tuned** models.
 
 6. **Deployment** – FastAPI app + Docker container
 
+#### Build the Docker image
+
+```
+docker build -t sleep-predictor .
+```
+
+
+#### Run the container
+
+```
+docker run -p 9696:9696 sleep-predictor
+```
+
+You should see logs like:
+
+```
+[2025-11-06 07:45:22 +0000] [1] [INFO] Starting gunicorn 21.2.0
+[2025-11-06 07:45:22 +0000] [1] [INFO] Listening at: http://0.0.0.0:9696 (1)
+...
+```
+
+#### Test the endpoint:
+In another terminal, test the app with an example sleep data:
+```
+curl -X POST -H "Content-Type: application/json" \
+  -d '{
+    "gender": "Female",
+    "age": 57,
+    "occupation": "Nurse",
+    "sleep_duration": 8.2,
+    "physical_activity_level": 75,
+    "stress_level": 3,
+    "bmi_category": "Overweight",
+    "heart_rate": 68,
+    "daily_steps": 7000,
+    "systolic": 140,
+    "diastolic": 95,
+    "sleep_disorder": "Sleep Apnea"
+  }' \
+  http://localhost:9696/predict
+```
+
+#### Result
+You should get back JSON like:
+
+```
+{
+  "sleep_prediction": 7.4,
+  "sleep_quality": "Good"
+}
+```
+
+
+### StreamLit
+Alternatively you can run the stream lit app to alter the input parameter and get a prediction on the sleep quality.
+To run the **StreamLit** app, in a terminal, run the below command:
+```
+ pipenv shell
+ cd notebooks/
+ streamlit run app.py
+ ```
+
+Open the StreamLit app in a browser or go to **Ports** and open **8501** or the port mapped for the StreamLit app. 

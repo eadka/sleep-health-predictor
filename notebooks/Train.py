@@ -183,7 +183,7 @@ input_file = 'model_pipeline.bin'
 # In[23]:
 
 
-with open(output_file, 'rb') as f_in:
+with open(input_file, 'rb') as f_in:
     pipe_ret = pickle.load(f_in)
 
 

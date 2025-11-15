@@ -13,6 +13,8 @@ jupyter = "*"
 matplotlib = "*"
 xgboost = "*"
 flask = "*"
+gunicorn = "*"
+streamlit = "*"
 
 [dev-packages]
 

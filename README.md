@@ -192,3 +192,13 @@ To run the **StreamLit** app, in a terminal, run the below command:
  ```
 
 Open the StreamLit app in a browser or go to **Ports** and open **8501** or the port mapped for the StreamLit app. 
+
+<p align="center">
+  <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/StreamLitApp_sleep_health_predictor.png" alt="StreamLit App" width="400"/>
+</p>
+
+Add in the data and click on **Predict Sleep Quality** button to see the sleep quality prediction.
+
+<p align="center">
+  <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/StreamLitAppResult_sleep_health_predictor.png" alt="StreamLit App" width="400"/>
+</p>

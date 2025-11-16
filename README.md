@@ -68,28 +68,28 @@ Following steps were performed in this notebook.
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻 <b>Neg</b></td>
+<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
 <td><b>Systolic BP</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher systolic blood pressure is linked to poorer sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻 <b>Neg</b></td>
+<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
 <td><b>Diastolic BP</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher diastolic pressure also correlates with lower sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻 <b>Neg</b></td>
+<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
 <td><b>Heart Rate</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher heart rates are associated with reduced sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻 <b>Neg</b></td>
+<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
 <td><b>Stress Level</b></td>
 <td><span style="color:Tomato;"><b>Strong</b></span></td>
 <td>Increased stress leads to significantly poorer sleep quality.</td>

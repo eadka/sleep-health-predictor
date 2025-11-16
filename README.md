@@ -40,7 +40,7 @@ Following steps were performed in this notebook.
 <tr><th>Type</th><th>Feature</th><th>Correlation</th><th>Interpretation</th></tr>
 
 <tr>
-<td style="white-space: nowrap;">🟢︎ <b>Pos</b></td>
+<td style="white-space: nowrap;">⬆︎ <b>Pos</b></td>
 <td><b>Age (29–59 yrs)</b></td>
 <td><span style="color:MediumSeaGreen;"><b>Mild</b></span></td>
 <td>Middle-aged individuals tend to report slightly better sleep quality.</td>

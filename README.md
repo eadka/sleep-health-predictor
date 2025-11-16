@@ -32,7 +32,7 @@ Following steps were performed in this notebook.
 2. **Feature Engineering**
 3. **Exploratory Data Analysis**
 
-## 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
+### 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
 
 The below table shows the impact of correlation between individual features and Quality of Sleep.
 <table style="table-layout: fixed; width: 100%; border-collapse: collapse;">
@@ -129,15 +129,17 @@ The below table shows the results of the **Baseline** and **Tuned** models.
 
 6. **Deployment** – Flask + Streamlit + Docker container
 
+## Steps to run the application
+### 1. Docker
 
-#### Build the Docker image
+Build the Docker image
 
 ```
 docker build -t sleep-predictor .
 ```
 
 
-#### Run the container
+#### 2. Run the container
 
 ```
 docker run -p 9696:9696 sleep-predictor
@@ -151,7 +153,7 @@ You should see logs like:
 ...
 ```
 
-#### Test the endpoint:
+### 3. Test the endpoint:
 In another terminal, test the app with an example sleep data:
 ```
 curl -X POST -H "Content-Type: application/json" \
@@ -172,7 +174,7 @@ curl -X POST -H "Content-Type: application/json" \
   http://localhost:9696/predict
 ```
 
-#### Result
+### 4. Result
 You should get back JSON like:
 
 ```
@@ -182,10 +184,18 @@ You should get back JSON like:
 }
 ```
 
+### 5. Docker close
+To clean up all the containers, images, networks and caches:
 
-### StreamLit
-Alternatively you can run the stream lit app to alter the input parameter and get a prediction on the sleep quality.
-To run the **StreamLit** app, in a terminal, run the below command:
+```
+docker system prune -a --volumes
+```
+
+## StreamLit
+Alternatively you can run the stream lit app for a visual interpretation to alter the input parameter and get a prediction on the sleep quality.
+
+
+To run the **StreamLit** app, open a terminal and run the below command:
 ```
  pipenv shell
  cd notebooks/
@@ -205,7 +215,7 @@ Add in the data and click on **Predict Sleep Quality** button to see the sleep q
 </p>
 
 
-### Cloud deployment with **fly.io**
+## Cloud deployment with **fly.io**
 The Flask service is fully Dockerized and deployed to Fly.io, providing a secure and scalable cloud endpoint for predictions.
 
 ![Demo](images/flyio_deployment.gif)

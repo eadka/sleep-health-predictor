@@ -15,15 +15,13 @@ This project uses the [Sleep Health and Lifestyle Dataset](https://www.kaggle.co
 
 
 ## Dataset
-**Source:** Kaggle — [*Sleep Health and Lifestyle Dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) 
-
-The dataset is imported from the above source into the [data](https://github.com/eadka/sleep-health-predictor/tree/main/data) folder
-and saved as sleep_health_lifestyle.csv.
+The [*dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) is imported into the [data](https://github.com/eadka/sleep-health-predictor/tree/main/data) folder and saved as *sleep_health_lifestyle.csv*.
 
 
 **Features include:**
 - `Age`, `Gender`, `Occupation`, `Blood Pressure`, `Stress Level`, `Heart Rate`, `Physical Activity Level`, `Daily Steps`, `BMI`, `Sleep Duration`, `Sleep Disorder`
 - Target: `Quality of Sleep` 
+
 
 ## Workflow
 The dataset analysis and the models training were conducted in Jupyter Notebook. You can find it in the file named [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb).
@@ -36,6 +34,7 @@ Following steps were performed in this notebook.
 
 ## 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
 
+The below table shows the impact of correlation between individual features and Quality of Sleep.
 <table style="table-layout: fixed; width: 100%; border-collapse: collapse;">
 <tr><th>Type</th><th>Feature</th><th>Correlation</th><th>Interpretation</th></tr>
 
@@ -128,7 +127,8 @@ The below table shows the results of the **Baseline** and **Tuned** models.
 
 ---
 
-6. **Deployment** – FastAPI app + Docker container
+6. **Deployment** – Flask + Streamlit + Docker container
+
 
 #### Build the Docker image
 
@@ -203,3 +203,9 @@ Add in the data and click on **Predict Sleep Quality** button to see the sleep q
 <p align="center">
   <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/StreamLitAppResult_sleep_health_predictor.png" alt="StreamLit App" width="600"/>
 </p>
+
+
+### Cloud deployment with **fly.io**
+The Flask service is fully Dockerized and deployed to Fly.io, providing a secure and scalable cloud endpoint for predictions.
+
+![Demo](images/flyio_deployment.gif)

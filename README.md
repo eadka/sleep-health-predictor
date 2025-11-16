@@ -47,49 +47,49 @@ Following steps were performed in this notebook.
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🟢 <b>Pos</b></td>
+<td style="white-space: nowrap;">⬆︎ <b>Pos</b></td>
 <td><b>Sleep Duration</b></td>
 <td><span style="color:MediumSeaGreen;"><b>Strong</b></span></td>
 <td>Longer sleep duration is associated with better sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🟢 <b>Pos</b></td>
+<td style="white-space: nowrap;">⬆︎ <b>Pos</b></td>
 <td><b>Physical Activity Level</b></td>
 <td><span style="color:MediumSeaGreen;"><b>Weak</b></span></td>
 <td>Regular exercise contributes to improved sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🟢 <b>Pos</b></td>
+<td style="white-space: nowrap;">⬆︎ <b>Pos</b></td>
 <td><b>Daily Steps</b></td>
 <td><span style="color:MediumSeaGreen;"><b>Very Low</b></span></td>
 <td>General movement has limited direct effect on sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
+<td style="white-space: nowrap;">⬇︎ <b>Neg</b></td>
 <td><b>Systolic BP</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher systolic blood pressure is linked to poorer sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
+<td style="white-space: nowrap;">⬇︎ <b>Neg</b></td>
 <td><b>Diastolic BP</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher diastolic pressure also correlates with lower sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
+<td style="white-space: nowrap;">⬇︎ <b>Neg</b></td>
 <td><b>Heart Rate</b></td>
 <td><span style="color:Tomato;"><b>Weak</b></span></td>
 <td>Higher heart rates are associated with reduced sleep quality.</td>
 </tr>
 
 <tr>
-<td style="white-space: nowrap;">🔻︎ <b>Neg</b></td>
+<td style="white-space: nowrap;">⬇︎ <b>Neg</b></td>
 <td><b>Stress Level</b></td>
 <td><span style="color:Tomato;"><b>Strong</b></span></td>
 <td>Increased stress leads to significantly poorer sleep quality.</td>

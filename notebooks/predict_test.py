@@ -1,6 +1,7 @@
 import requests
 
 url = "http://127.0.0.1:9696/predict"
+# url = "https://muddy-wind-5020.fly.dev/predict"
 
 sample_individual = {
     "gender": "Female",
@@ -64,7 +65,7 @@ sample_good_sleep = {
 
 # send POST request
 # requests.post(url, json=sample_individual)
-response = requests.post(url, json=sample_poor_sleep)
+response = requests.post(url, json=sample_good_sleep)
 
 # print response details for debugging
 print("Response Status code:", response.status_code)

@@ -1,7 +1,11 @@
 # app.py
+import os
 import streamlit as st
 import streamlit.components.v1 as components
 import requests
+
+# PORT = int(os.environ.get("PORT", 8501))  # Fly.io sets this automatically
+# API_URL = os.environ.get("API_URL", "http://localhost:9696/predict") 
 
 # ---- Page Setup ----
 st.set_page_config(page_title="🌙 Sleep Quality Predictor", layout="wide")
@@ -64,7 +68,9 @@ if predict_clicked:
     }
 
     try:
+        # API_URL = "https://falling-butterfly-5988.fly.dev/predict"
         response = requests.post("http://localhost:9696/predict", json=data)
+        # response = requests.post(API_URL, json=data)
         if response.status_code == 200:
             result = response.json()
             sleep_quality = result['sleep_quality']

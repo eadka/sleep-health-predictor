@@ -36,7 +36,7 @@ Following steps were performed in this notebook.
 
 ## 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
 
-<table>
+<table style="table-layout: fixed; width: 100%; border-collapse: collapse;">
 <tr><th>Type</th><th>Feature</th><th>Correlation</th><th>Interpretation</th></tr>
 
 <tr>

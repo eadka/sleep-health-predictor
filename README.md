@@ -1,7 +1,7 @@
 # Sleep Health Predictor
 
 <p align="center">
-  <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/sleep_health_predictor_logo.png" alt="SleepHealth" width="800"/>
+  <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/sleep_health_predictor_logo.png" alt="SleepHealth" width="800" height="200"/>
 </p>
 
 A machine learning project analyzing how **lifestyle habits** like stress, BMI, and exercise influence **sleep quality**. 

@@ -4,7 +4,7 @@
   <img src="https://github.com/eadka/sleep-health-predictor/blob/main/images/sleep_health_predictor_logo.png" alt="SleepHealth" width="400"/>
 </p>
 
-A machine learning project analyzing how **lifestyle habits** like stress, BMI, and exercise influence **sleep quality**.
+A machine learning project analyzing how **lifestyle habits** like stress, BMI, and exercise influence **sleep quality**. 
 
 
 ## Project Overview
@@ -17,6 +17,7 @@ This project uses the [Sleep Health and Lifestyle Dataset](https://www.kaggle.co
 ## Dataset
 The [*dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset) is imported into the [data](https://github.com/eadka/sleep-health-predictor/tree/main/data) folder and saved as *sleep_health_lifestyle.csv*.
 
+*The data can also be downloaded by running the [kaggle-data-import](data/kaggle-data-import.ipynb) notebook.*
 
 **Features include:**
 - `Age`, `Gender`, `Occupation`, `Blood Pressure`, `Stress Level`, `Heart Rate`, `Physical Activity Level`, `Daily Steps`, `BMI`, `Sleep Duration`, `Sleep Disorder`
@@ -24,13 +25,16 @@ The [*dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-life
 
 
 ## Workflow
-The dataset analysis and the models training were conducted in Jupyter Notebook. You can find it in the file named [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb).
+Dataset analysis and models training are conducted in the [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb) Jupyter Notebook. 
 
-Following steps were performed in this notebook.
+Following steps are performed:
 
 1. **Data Cleaning & Exploration**
 2. **Feature Engineering**
 3. **Exploratory Data Analysis**
+4. **Model Training** – Models trained are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
+5. **Model Evaluation** – **Grid Search** along with **Cross Validation** are used to tune the hyperparameters to ensure we enable better parameter interactions and get more robust results. **R²**, **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) are used to assess the results.
+6. **Deployment** – Flask + Streamlit + Docker container
 
 ### 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
 
@@ -97,21 +101,17 @@ The below table shows the impact of correlation between individual features and 
 
 ---
 
-### 🧠 Insights Summary
+### ⭐️ Results of Model Training and Evaluation
 
-Overall, <b>sleep duration</b> and <b>stress level</b> emerge as the most influential factors affecting sleep quality.  
-While longer sleep and regular physical activity tend to enhance rest quality, elevated <b>stress</b>, <b>heart rate</b>, and <b>blood pressure</b> correspond with poorer sleep outcomes.  
+Models trained and evaluated are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
 
-💡 Maintaining a <b>balanced lifestyle</b> — combining adequate rest, consistent exercise, and stress management — can meaningfully improve overall sleep quality.
+**Grid Search** along with **Cross Validation** are used to tune the hyperparameters to ensure we enable better parameter interactions and get more robust results. 
 
----
+**R²**, **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) are used to evaluate the results.
 
-4. **Model Training** – Models trained are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
-
-
-5. **Model Evaluation** – **Grid Search** along with **Cross Validation** are used to tune the hyperparameters to ensure we enable better parameter interactions and get more robust results. **R²**, **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) are used to assess the results.
 
 The below table shows the results of the **Baseline** and **Tuned** models. 
+
 
 | Model                 | R² (Baseline) | RMSE (Baseline) | MAE (Baseline) | R² (Tuned) | RMSE (Tuned) | MAE (Tuned) |
 | --------------------- | ------------- | --------------- | -------------- | ---------- | ------------ | ----------- |
@@ -123,14 +123,13 @@ The below table shows the results of the **Baseline** and **Tuned** models.
 |🥇**XGBoost**         | 0.980         | 0.194           | 0.031          | 0.985      | 0.171        | 0.055       |
 
 
+### 🏆 Winning Model
+
 **XGBoost** achieved the **highest R²** (0.985) and **lowest RMSE** (0.171) among all tuned models, indicating it’s the **most robust** model for predicting `quality_of_sleep`.
 
----
-
-6. **Deployment** – Flask + Streamlit + Docker container
 
 ## Steps to run the application
-### 1. Docker
+### 1. Docker Build 
 
 Build the Docker image
 
@@ -139,7 +138,7 @@ docker build -t sleep-predictor .
 ```
 
 
-#### 2. Run the container
+#### 2. Run Container
 
 ```
 docker run -p 9696:9696 sleep-predictor
@@ -153,7 +152,7 @@ You should see logs like:
 ...
 ```
 
-### 3. Test the endpoint:
+### 3. Test Endpoint:
 In another terminal, test the app with an example sleep data:
 ```
 curl -X POST -H "Content-Type: application/json" \
@@ -184,7 +183,7 @@ You should get back JSON like:
 }
 ```
 
-### 5. Docker close
+### 5. Docker Close
 To clean up all the containers, images, networks and caches:
 
 ```
@@ -215,7 +214,18 @@ Add in the data and click on **Predict Sleep Quality** button to see the sleep q
 </p>
 
 
-## Cloud deployment with **fly.io**
+## ☁️ Cloud deployment with **fly.io**
 The Flask service is fully Dockerized and deployed to Fly.io, providing a secure and scalable cloud endpoint for predictions.
 
+The animation below shows the app *muddy-wind-5020* running in fly.io. This is passed as the URL in [**predict-test.py**](notebooks/predict_test.py) which when run uses the model deployed in the cloud to evaluate and return the result. 
+
 ![Demo](images/flyio_deployment.gif)
+
+
+## 🧠 Overall Insights Summary
+
+Overall, <b>sleep duration</b> and <b>stress level</b> emerge as the most influential factors affecting sleep quality.  
+While longer sleep and regular physical activity tend to enhance rest quality, elevated <b>stress</b>, <b>heart rate</b>, and <b>blood pressure</b> correspond with poorer sleep outcomes.  
+
+💡 Maintaining a <b>balanced lifestyle</b> — combining adequate rest, consistent exercise, and stress management — can meaningfully improve overall sleep quality.
+

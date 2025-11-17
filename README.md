@@ -25,15 +25,15 @@ The [*dataset*](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-life
 
 
 ## Workflow
-Dataset analysis and models training are conducted in the [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb) Jupyter Notebook. 
+Data analysis and models training are conducted in the [sleep-health-predictor-notebook.ipynb](https://github.com/eadka/sleep-health-predictor/blob/main/notebooks/sleep-health-predictor-notebook.ipynb) Jupyter Notebook. 
 
 Following steps are performed:
 
 1. **Data Cleaning & Exploration**
 2. **Feature Engineering**
 3. **Exploratory Data Analysis**
-4. **Model Training** – Models trained are: Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
-5. **Model Evaluation** – **Grid Search** along with **Cross Validation** are used to tune the hyperparameters to ensure we enable better parameter interactions and get more robust results. **R²**, **RMSE** (Root Mean Squared Error) and **MAE** (Mean Absolute Error) are used to assess the results.
+4. **Model Training** – Linear Regression, Ridge Regression, Lasso, Decision Trees, Random Forest and XGBoost
+5. **Model Evaluation** – **Grid Search** along with **Cross Validation** are used to tune the hyperparameters tuning. **R²**, **RMSE** and **MAE** are used to assess the results.
 6. **Deployment** – Flask + Streamlit + Docker container
 
 ### 💤 Findings from Exploratory Data Analysis with *Quality of Sleep*
@@ -138,7 +138,7 @@ docker build -t sleep-predictor .
 ```
 
 
-#### 2. Run Container
+### 2. Run Container
 
 ```
 docker run -p 9696:9696 sleep-predictor
@@ -190,8 +190,8 @@ To clean up all the containers, images, networks and caches:
 docker system prune -a --volumes
 ```
 
-## StreamLit
-Alternatively you can run the stream lit app for a visual interpretation to alter the input parameter and get a prediction on the sleep quality.
+## 🎈 StreamLit
+Alternatively you can run the stream lit app for a visual alteration of the input parameters and to get a prediction on sleep quality.
 
 
 To run the **StreamLit** app, open a terminal and run the below command:
@@ -222,7 +222,7 @@ The animation below shows the app *muddy-wind-5020* running in fly.io. This is p
 ![Demo](images/flyio_deployment.gif)
 
 
-## 🧠 Overall Insights Summary
+## 😴 Overall Insights on Sleep Quality
 
 Overall, <b>sleep duration</b> and <b>stress level</b> emerge as the most influential factors affecting sleep quality.  
 While longer sleep and regular physical activity tend to enhance rest quality, elevated <b>stress</b>, <b>heart rate</b>, and <b>blood pressure</b> correspond with poorer sleep outcomes.  
